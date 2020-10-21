@@ -8,7 +8,8 @@ void CorrectWeights(HepMC::WeightContainer & in) {
 	std::cout.precision(9);
 	std::vector<double> out(in.size(), 0.);
 	// unsigned N = (in.size() - 2) / 2;
-	int N = (-3 + int(sqrt(9.0 + 8.0 * (double(in.size()) - 2.0)) + 0.5)) / 2;
+	//int N = (-3 + int(sqrt(9.0 + 8.0 * (double(in.size()) - 2.0)) + 0.5)) / 2;
+	int N = (-3 + int(sqrt(9.0 + 8.0 * (double(in.size()) - 2.0)))) / 2;
 	for (unsigned i = 0; i < in.size(); ++i) {
 		if (verb > 0) std::cout << " - " << in[i] << "\n";
 		out[i] = in[i];

@@ -1,0 +1,90 @@
+{
+    "blocks": [
+        "frblock"
+    ],
+    "inactive": {
+        "default_val": 0.0,
+        "parameters": [
+            {
+                "block": "frblock",
+                "index": 18,
+                "name": "lambdasmeft",
+                "val": 1000.0
+            },
+            {
+                "block": "frblock",
+                "index": 83,
+                "name": "mw0",
+                "val": 80.387
+            }
+        ]
+    },
+    "parameter_defaults": {
+        "block": "frblock",
+        "gen": 0.0,
+        "sm": 0.0,
+        "val": 1.0
+    },
+    "parameters": [
+        {
+            "index": 24,
+            "name": "chbox"
+        },
+        {
+            "index": 25,
+            "name": "chdd"
+        },
+        {
+            "index": 26,
+            "name": "chg"
+        },
+        {
+            "index": 28,
+            "name": "chw"
+        },
+        {
+            "index": 30,
+            "name": "chb"
+        },
+        {
+            "index": 32,
+            "name": "chwb"
+        },
+        {
+            "index": 39,
+            "name": "cugabs"
+        },
+        {
+            "index": 45,
+            "name": "chl1"
+        },
+        {
+            "index": 46,
+            "name": "chl3"
+        },
+        {
+            "index": 47,
+            "name": "che"
+        },
+        {
+            "index": 48,
+            "name": "chq1"
+        },
+        {
+            "index": 49,
+            "name": "chq3"
+        },
+        {
+            "index": 50,
+            "name": "chu"
+        },
+        {
+            "index": 51,
+            "name": "chd"
+        },
+        {
+            "index": 54,
+            "name": "cll1"
+        }
+    ]
+}

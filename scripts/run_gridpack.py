@@ -130,6 +130,8 @@ else:
 
 os.chdir(iwd)
 
+if args.to_step == 'shower': finished = True
+
 if not finished:
     rivet_args = ['rivet', '--analysis=%s' % plugins, '%s/events_%i.hepmc' % (tmpdir, seed), '-o', '%s/Rivet_%i.yoda' % (outdir, seed)]
     if ignore_beams:
