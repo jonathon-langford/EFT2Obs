@@ -177,6 +177,7 @@ if load_hepmc is None:
                 lines.append('set HEPMCoutput:file fifo@%s/events_%i.hepmc' % (tmpdir, seed))
             else:
                 lines.append('set HEPMCoutput:file %s/events_%i.hepmc' % (tmpdir, seed))
+            lines.append('set Main:numberOfEvents 0')
             with open('mgrunscript', "w") as text_file:
                 text_file.write('\n'.join(lines))
             subprocess.check_call('./bin/madevent --debug shower GridRun < mgrunscript', shell=True)
@@ -186,6 +187,9 @@ else:
 
 
 os.chdir(iwd)
+
+if args.to_step == 'shower':
+    finished = True
 
 if not finished:
     rivet_args = ['rivet', '--analysis=%s' % plugins, '%s/events_%i.hepmc' % (tmpdir, seed), '-o', '%s/Rivet_%i.yoda' % (outdir, seed)]

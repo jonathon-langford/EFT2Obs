@@ -89,9 +89,12 @@ class StandaloneReweight(object):
 
         rw_me = self.mods[0]
         rw_me = self.full_mod
+        self.RW_ME = rw_me
+
         ## The following code adapted from Madgraph, rweight_interface.py: L1770
         self.all_pdgs = [[pdg for pdg in pdgs if pdg!=0] for pdgs in rw_me.get_pdg_order()[0]]
-        self.all_prefix = [''.join([X.decode() for X in j]).strip().lower() for j in rw_me.get_prefix()]
+        #self.all_prefix = [''.join([X.decode() for X in j]).strip().lower() for j in rw_me.get_prefix()]
+        self.all_prefix = [j.decode().strip().lower() for j in rw_me.get_prefix()]
         prefix_set = set(self.all_prefix)
 
         # Prepare the helicity dict
